@@ -1,0 +1,11 @@
+@import '@fontsource/poppins/index.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Monocraft';
+  src: url('/src/assets/fonts/Monocraft.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
