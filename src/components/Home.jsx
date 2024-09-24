@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { FaInstagram, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 const TypewriterEffect = ({ texts, typingSpeed = 150, erasingSpeed = 75, delayBetweenTexts = 2000 }) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -46,16 +45,16 @@ const CyanLight = () => (
 
 const SocialIcons = () => (
   <div className="flex space-x-4 mt-5 ml-2">
-    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+    <a href="https://instagram.com/vinigavaa" target="_blank" rel="noopener noreferrer">
       <FaInstagram className="text-white w-6 h-6 opacity-50 transition-transform duration-300 hover:scale-110 hover:opacity-100" />
     </a>
-    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/Vinigavaa" target="_blank" rel="noopener noreferrer">
       <FaGithub className="text-white w-6 h-6 opacity-50 transition-transform duration-300 hover:scale-110 hover:opacity-100" />
     </a>
-    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+    <a href="https://linkedin.com/in/vinicius-gava-86354730a" target="_blank" rel="noopener noreferrer">
       <FaLinkedin className="text-white w-6 h-6 opacity-50 transition-transform duration-300 hover:scale-110 hover:opacity-100" />
     </a>
-    <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/48999439999" target="_blank" rel="noopener noreferrer">
       <FaWhatsapp className="text-white w-6 h-6 opacity-50 transition-transform duration-300 hover:scale-110 hover:opacity-100" />
     </a>
   </div>
@@ -65,29 +64,30 @@ function Home() {
   const texts = ["Junior developer Frontend", "Junior developer Backend", "UX/UI Designer"];
 
   return (
-    <div className="pt-5 p-4 bg-custom-purple w-full h-screen flex items-center justify-start overflow-hidden relative">
+    <div className="bg-custom-purple w-full min-h-screen flex items-center justify-start overflow-hidden relative px-4 py-8 md:px-20 lg:px-40">
       <CyanLight />
-      <div className="grid grid-cols-2 gap-8 w-full px-40 relative z-10">
-        {/* Esquerda - Nome e Sobre */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full relative z-10">
+        {/* Left - Name and About */}
         <div className="text-left">
-          <h1 className="text-5xl text-white font-bold">Vinicius Gava</h1>
+          <h1 className="text-4xl md:text-5xl text-white font-bold">Vinicius Gava</h1>
           <p className="text-custom-cyan font-monocraft mt-2 ml-2">
             <TypewriterEffect texts={texts} typingSpeed={150} erasingSpeed={75} delayBetweenTexts={2000} />
           </p>
           <p className="text-white opacity-50 mt-3 ml-2">
-            I build interactive, engaging <br />and accessible digital experiences.</p>
-            <div className="space-y-5">
-            <Link to="/outra-pagina" className="flex items-center space-x-3 group ml-2.5 mt-10 mb-10">
+            I build interactive, engaging <br className="hidden md:block" />and accessible digital experiences.
+          </p>
+          <div className="space-y-5">
+            <a href="https://github.com/Vinigavaa" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 group ml-2.5 mt-10 mb-10">
               <div className="w-10 h-0.5 bg-gray-500 transition-all duration-300 transform group-hover:bg-white group-hover:scale-x-110 origin-left"></div>
               <span className="text-gray-400 uppercase text-sm font-semibold tracking-widest transition duration-300 group-hover:text-white">Projects</span>
-            </Link>
-            </div>  
-            <SocialIcons/>
+            </a>
+          </div>
+          <SocialIcons />
         </div>
 
-        {/* texto longo da direita */}
+        {/* Right - Long Text */}
         <div className="text-left">
-          <p className="text-white text-opacity-65">
+          <p className="text-white text-opacity-65 text-sm md:text-base">
             Minha jornada no mundo do desenvolvimento começou em <span className="text-custom-cyan">2021</span>, aos 15 anos, quando criei chatbots para o Discord
             utilizando a biblioteca discord.js e desenvolvendo no Visual Studio Code. Esse projeto despertou minha paixão por
             tecnologia, e logo comecei a explorar a criação de sites simples com <span className="text-custom-cyan">HTML, CSS e JavaScript</span>. <br /><br />
