@@ -77,7 +77,7 @@ function Home() {
             I build interactive, engaging <br className="hidden md:block" />and accessible digital experiences.
           </p>
           <div className="space-y-5">
-            <a href="https://github.com/Vinigavaa" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 group ml-2.5 mt-10 mb-10">
+            <a href="https://github.com/Vinigavaa?tab=repositories" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 group ml-2.5 mt-10 mb-10">
               <div className="w-10 h-0.5 bg-gray-500 transition-all duration-300 transform group-hover:bg-white group-hover:scale-x-110 origin-left"></div>
               <span className="text-gray-400 uppercase text-sm font-semibold tracking-widest transition duration-300 group-hover:text-white">Projects</span>
             </a>
@@ -85,7 +85,7 @@ function Home() {
           <SocialIcons />
         </div>
 
-        {/* Right - Long Text */}
+        {/* Hello */}
         <div className="text-left">
           <p className="text-white text-opacity-65 text-sm md:text-base">
             Minha jornada no mundo do desenvolvimento começou em <span className="text-custom-cyan">2021</span>, aos 15 anos, quando criei chatbots para o Discord
